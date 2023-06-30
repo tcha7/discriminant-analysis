@@ -121,17 +121,17 @@ class DCA:
 
         return (Sw, Sb)
     
-    class KDCA:
-        """To use KDCA
-        1) Initialize:
-            kdca = KDCA(rho=0.01, rho_p=0.01, kernel='rbf', gamma=1, degree=3, coef0=1)
-        2) Fit to data:
-            kdca.fit(X,y)
-        3) Transform the data:
-            (Assuming that x initially has 100 features and we want to reduce it down to 10 dimensions)
-            new_dimension = 10
-            x_transformed = kdca.transform(x, dim=new_dimension)
-        """
+class KDCA:
+    """To use KDCA
+    1) Initialize:
+        kdca = KDCA(rho=0.01, rho_p=0.01, kernel='rbf', gamma=1, degree=3, coef0=1)
+    2) Fit to data:
+        kdca.fit(X,y)
+    3) Transform the data:
+        (Assuming that x initially has 100 features and we want to reduce it down to 10 dimensions)
+        new_dimension = 10
+        x_transformed = kdca.transform(x, dim=new_dimension)
+    """
     def __init__(
         self,
         rho: float = None,
